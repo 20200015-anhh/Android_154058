@@ -9,12 +9,10 @@ import android.widget.TextView
 
 class CustomAdapter (val activity: Activity, val list: List<OutData>) : ArrayAdapter<OutData>(activity, R.layout.list_item) {
     override fun getCount(): Int {
-        return list.size    // Vẽ lên view tất cả các dòng của list được tạo ra
+        return list.size
     }
-
-
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val contexts = activity.layoutInflater  // Chuyển layout.xml thành View trong android
+        val contexts = activity.layoutInflater
         val rowView = contexts.inflate(R.layout.list_item, parent, false)
 
         // Get ra  id
